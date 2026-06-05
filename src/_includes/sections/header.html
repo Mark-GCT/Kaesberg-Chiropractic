@@ -3,73 +3,96 @@
 <!-- ============================================ -->
 
 <header id="cs-navigation">
-    <div class="cs-container">
-        <!--Nav Logo-->
-        <a href="/" class="cs-logo" aria-label="Company Name Home page">
-            <img src="/assets/svgs/logo-black.svg" alt="" width="210" height="29" aria-hidden="true" decoding="async">
-        </a>
+    <!--Nav Logo-->
+    <a href="/" class="cs-logo" aria-label="Return to {{ client.name }} Home page">
+        <img src="https://csimg.nyc3.digitaloceanspaces.com/Footer/logo-light.svg" alt="" width="210" height="29" aria-hidden="true" decoding="async">
+    </a>
+    <!--Top Bar-->
+    <ul class="cs-top-bar">
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone-stroke-green.svg" alt="" width="24" height="24" aria-hidden="true"
+                    decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Call Us Now</span>
+                <a href="tel:{{ client.phone }}" class="cs-link">{{ client.phoneFormatted }}</a> <a href="tel:{{ client.phone2 }}" class="cs-link">{{ client.phoneFormatted2 }}</a>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fmail-stroke-green.svg" alt="" width="24" height="24" aria-hidden="true"
+                    decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Send A Message</span>
+                <a href="mailto:{{ client.email }}" class="cs-link">{{ client.email }}</a>
+            </div>
+        </li>
+        <li class="cs-item cs-remove">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpin-stroke-green.svg" alt="" width="24" height="24" aria-hidden="true"
+                    decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Visit Us</span>
+                <a href="https://maps.google.com/?q={{ client.address.lineOne }}+{{ client.address.city }}+{{ client.address.state }}+{{ client.address.zip }}" class="cs-link" target="_blank" rel="noopener noreferrer">
+                    {{ client.address.lineOne }} {{ client.address.city }} {{ client.address.state }} {{ client.address.zip }}
+                </a>
+                <a href="https://maps.google.com/?q={{ client.address2.lineOne }}+{{ client.address2.city }}+{{ client.address2.state }}+{{ client.address2.zip }}" class="cs-link" target="_blank" rel="noopener noreferrer">
+                    {{ client.address2.lineOne }} {{ client.address2.city }} {{ client.address2.state }} {{ client.address2.zip }}
+                </a>
+            </div>
+        </li>
+    </ul>
+    <div class="cs-bottom-bar">
         <!--Navigation List-->
         <nav class="cs-nav" aria-label="main navigation">
             <!--Mobile Nav Toggle-->
             <button class="cs-toggle" id="cs-toggle" aria-expanded="false" aria-controls="cs-ul-wrapper" aria-label="mobile menu toggle" aria-haspopup="menu">
                 <span class="cs-box" aria-hidden="true">
-                    <span class="cs-line cs-line1" aria-hidden="true"></span>
-                    <span class="cs-line cs-line2" aria-hidden="true"></span>
-                    <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    <span class="cs-line cs-line1"></span>
+                    <span class="cs-line cs-line2"></span>
+                    <span class="cs-line cs-line3"></span>
                 </span>
             </button>
-            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             <div class="cs-ul-wrapper" id="cs-ul-wrapper">
-                <ul id="cs-expanded" class="cs-ul">
+                <ul class="cs-ul">
                     <li class="cs-li">
-                        <a href="/" class="cs-li-link {% if page.url == "/" %} cs-active {% endif %}" {% if page.url == "/" %} aria-current="page" {% endif %}>
+                        <!-- cs-active and aria-current="page" are hard-coded and must instead be managed dynamically via Eleventy templating -->
+                        <a href="/" class="cs-li-link cs-active" aria-current="page">
                             Home
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/about/" class="cs-li-link {% if page.url == "/about/" %} cs-active {% endif %}" {% if page.url == "/about/" %} aria-current="page" {% endif %}>
+                        <a href="/about/" class="cs-li-link">
                             About
                         </a>
                     </li>
-                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
-                    <!-- Note: When copying this dropdown, update the id attribute with an appropriate name (e.g., "services-dropdown-toggle", "products-dropdown-toggle") and ensure the aria-labelledby attribute on the ul matches the button's id -->
-                    <li class="cs-li cs-dropdown">
-                        <button class="cs-li-link cs-dropdown-toggle {% if page.url == "/project-one/" or page.url == "/project-two/" %} cs-active {% endif %}" aria-haspopup="menu" aria-expanded="false" id="projects-dropdown-toggle">
-                            Projects
-                            <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
-                        </button>
-                        <ul class="cs-drop-ul" aria-labelledby="projects-dropdown-toggle">
-                            <li class="cs-drop-li">
-                                <a href="/project-one/" class="cs-li-link cs-drop-link">Project One</a>
-                            </li>
-                            <li class="cs-drop-li">
-                                <a href="/project-two/" class="cs-li-link cs-drop-link">Project Two</a>
-                            </li>
-                        </ul>
-                    </li>
                     <li class="cs-li">
-                        <a href="/reviews/" class="cs-li-link {% if page.url == "/reviews/" %} cs-active {% endif %}" {% if page.url == "/reviews/" %} aria-current="page" {% endif %}>
-                            Reviews
+                        <a href="/services/" class="cs-li-link">
+                            Services
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/blog/" class="cs-li-link {% if page.url == "/blog/" %} cs-active {% endif %}" {% if page.url == "/blog/" %} aria-current="page" {% endif %}>
-                            Blog
+                        <a href="/weight-loss/" class="cs-li-link">
+                            Weight Loss
                         </a>
                     </li>
-                    <li class="cs-li cs-hide-on-desktop">
-                        <a href="/contact/" class="cs-li-link {% if page.url == "/contact/" %} cs-active {% endif %}" {% if page.url == "/contact/" %} aria-current="page" {% endif %}>
-                            Contact
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            Aesthetics
+                        </a>
+                    </li>
+                    <li class="cs-li">
+                        <a href="" class="cs-li-link">
+                            FAQ
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <a href="/contact/" class="cs-button-solid cs-nav-button">Contact Us</a>
-        <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
-        <button id="dark-mode-toggle" aria-label="dark mode toggle" aria-pressed="false">
-            <img class="cs-moon" aria-hidden="true" src="/assets/svgs/moon.svg" decoding="async" alt="" width="15" height="15">
-            <img class="cs-sun" aria-hidden="true" src="/assets/svgs/sun.svg" decoding="async" alt="" width="15" height="15">
-        </button>
+        <a href="" class="cs-button-solid cs-nav-button">SCHEDULE AN APPOINTMENT</a>
     </div>
 </header>
+                                
