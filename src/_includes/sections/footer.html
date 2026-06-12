@@ -11,10 +11,10 @@
         <!-- Logo Group -->
         <div class="cs-logo-group">
             <a aria-label="go back to home" class="cs-logo" href="">
-                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Footer/logo-light.svg" alt="logo" width="240" height="32">
+                <img class="cs-logo-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/logo.png" alt="Kaesberg Chiropractic Logo" width="240" height="32">
             </a>
             <p class="cs-text">
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin Richard Latin professor at Hampden. Lorem Ipsum is not simply random text. 
+                Kaesberg Chiropractic is a family-owned and operated chiropractic clinic, specializing in accident and injury care, that has been serving the communities of Belleville, East St. Louis, IL, and surrounding areas for over 75 years.
             </p>
             <div class="cs-social">
                 <a class="cs-social-link" aria-label="visit facebook profile" href="{{ client.social.facebook }}">
@@ -27,25 +27,19 @@
             <span class="cs-header">Quick Links</span>
             <ul class="cs-ul cs-ul-1">
                 <li class="cs-li">
-                    <a class="cs-link" href="">Home</a>
+                    <a class="cs-link" href="/">Home</a>
                 </li>
                 <li class="cs-li">
-                    <a class="cs-link" href="">About</a>
+                    <a class="cs-link" href="/about/">About</a>
                 </li>
                 <li class="cs-li">
-                    <a class="cs-link" href="">Services</a>
+                    <a class="cs-link" href="/services/">Services</a>
                 </li>
                 <li class="cs-li">
-                    <a class="cs-link" href="">Donations</a>
+                    <a class="cs-link" href="/locations/">Locations</a>
                 </li>
                 <li class="cs-li">
-                    <a class="cs-link" href="">Events</a>
-                </li>
-                <li class="cs-li">
-                    <a class="cs-link" href="">Blog</a>
-                </li>
-                <li class="cs-li">
-                    <a class="cs-link" href="">Contact</a>
+                    <a class="cs-link" href="">Schedule Appointment</a>
                 </li>
             </ul>
         </div>
@@ -53,39 +47,51 @@
             <!-- Contact Info -->
             <span class="cs-header">Contact Information</span>
             <ul class="cs-ul">
-                <li class="cs-li">
+                    <li class="cs-li">
                     <!--Make this link go to the google page-->
-                    <a class="cs-link" href="" target="_blank">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fclock-grey.svg" alt="clock icon" width="20" height="20">
-                        M-F 8am – 5:30pm
-                    </a>
-                </li>
-                <li class="cs-li">
-                    <a class="cs-link" href="tel:555-497-1900">
-                        <img class="cs-contact-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone-grey.svg" alt="phone icon" width="20" height="20">
-                        555-497-1900
-                    </a>
-                </li>
-                <li class="cs-li">
-                    <a class="cs-link" href="mailto:office@email.com">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fmessage-grey.svg" alt="email icon" width="20" height="20">
-                        office@email.com
-                    </a>
-                </li>
-                <li class="cs-li">
-                    <!--Make this link go to the google page-->
-                    <a class="cs-link" href="" target="_blank">
+                    <a class="cs-link" href="{{ client.address.mapLink}}" target="_blank">
                         <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpin-grey.svg" alt="pin icon" width="20" height="20">
-                        555 Olive Crt, Montclair, CA
+                        {{ client.address.lineOne }} {{ client.address.city }} {{ client.address.state }} {{ client.address.zip }}
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <a class="cs-link" href="tel:{{ client.phone }}">
+                        <img class="cs-contact-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone-grey.svg" alt="phone icon" width="20" height="20">
+                        {{ client.phoneFormatted }}
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <!--Make this link go to the google page-->
+                    <a class="cs-link" href="{{ client.address.mapLink}}" target="_blank">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fclock-grey.svg" alt="clock icon" width="20" height="20">
+                        Monday - Thursday: By Appointment Only
+                    </a>
+                </li>
+                <br>
+                <li class="cs-li">
+                    <a href="{{ client.address2.mapLink}}" class="cs-link" target="_blank" rel="noopener noreferrer">
+                    <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpin-grey.svg" alt="pin icon" width="20" height="20">
+                    {{ client.address2.lineOne }} {{ client.address2.city }} {{ client.address2.state }} {{ client.address2.zip }}
+                    </a>
+                </li> 
+                <li class="cs-li">
+                    <a class="cs-link" href="tel:{{ client.phone2 }}">
+                        <img class="cs-contact-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone-grey.svg" alt="phone icon" width="20" height="20">
+                        {{ client.phoneFormatted2 }}
+                    </a>
+                </li>
+                <li class="cs-li">
+                    <!--Make this link go to the google page-->
+                    <a class="cs-link" href="{{ client.address2.mapLink}}" target="_blank">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fclock-grey.svg" alt="clock icon" width="20" height="20">
+                        Monday - Saturday: By Appointment Only
                     </a>
                 </li>
             </ul>
         </div>
     </div>
     <div class="cs-bottom">
-        <span class="cs-credit">
-            © Copyright 2023 <a href="" class="cs-credit-link" target="_blank">Stitch Designs</a>
-        </span>
+        <span id="dynamic-copyright" class="cs-credit"></span>
         <div class="cs-bottom-links">
             <a href="" class="cs-bottom-link">Privacy Policy</a>
             <a href="" class="cs-bottom-link">Terms Of Use</a>
