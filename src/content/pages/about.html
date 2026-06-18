@@ -20,7 +20,72 @@ eleventyComputed:
 
 {% block body %}
 
-    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+    <!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-843">
+    <div class="cs-container">
+        <span class="cs-int-title">Interior Page</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fyoga-m.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fyoga.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fyoga.jpg" alt="yoga" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
+
+<!-- ============================================ -->
+<!--                Meet The Team                 -->
+<!-- ============================================ -->
+
+<section id="meet-team-1141">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Our Expert Team</span>
+                <h2 class="cs-title">MEET YOUR DOCTOR</h2>
+                <p>
+                    Dr. Kendra Kaesberg-White attended Creighton University studying health sciences and Logan College of Chiropractic where she received a Bachelor’s Degree in Human Biology and a Doctorate of Chiropractic. Her areas of interest include geriatric care (elderly), pediatric care (children), neurodevelopment and yoga.
+                </p>
+                <br>
+                <ul class="cs-list">
+                    <h3>Licenses and Certifications</h3>
+                    <br>
+                    <li class="cs-list-item">Licensed in the State of Illinois - since 1984</li>
+                    <li class="cs-list-item">National Board Certifications: Basic Science, Clinical Science and Physical Therapy</li>
+                    <li class="cs-list-item">Certified in the Listening Program</li>
+                </ul>
+
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/DrKendra.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/DrKendra.png">
+                    <img loading="lazy" decoding="async" src="/assets/images/DrKendra.png" alt="Dr. Kendra Kaesberg-White" width="305" height="407">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Dr. Kendra Kaesberg-White</span>
+                    <span class="cs-job">Chiropractic Doctor</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+                                
+                                
 
     <!-- If you want the page to have a "CTA", remove the {# and #} below -->
     {# {% include 'sections/cta.html' %} #}
