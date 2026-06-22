@@ -19,11 +19,74 @@ eleventyComputed:
 {% endblock %}
 
 {% block body %}
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+<div id="banner-843">
+    <div class="cs-container">
+        <span class="cs-int-title">CLASS IV LASER THERAPY</span>
+    </div>
+    <!--Background Image-->
+     <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/spine.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/spine.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/spine.jpg" alt="Consultation with model spine at Kaesberg Chiropractic Clinic" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
 
-    <!-- If you want the page to have a "CTA", remove the {# and #} below -->
-    {# {% include 'sections/cta.html' %} #}
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<section id="content-page-851">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">CLASS IV <span class="cs-color">LASER</span> THERAPY SPECIALISTS IN <span class="cs-color">BELLEVILLE</span> & EAST ST. LOUIS</h1>
+            <h2>STATE OF THE ART TREATMENT</h2>
+            <p>
+                Class IV laser therapy is a painless treatment with no side effects. This modern form of therapy is a great option for ongoing care for chronic conditions such as carpal tunnel syndrome or tendinitis. Each treatment here at Kaesberg Chiropractic Clinic PC will only last about two minutes per area. If you are receiving cortisone shots or wish to avoid surgery, Class IV laser therapy might be right for you.
+            </p>
+            
+            <h2>HOW DOES LASER THERAPY WORK?</h2>
+            <p>
+                Class IV laser therapy sends a stimulated light of a specific wavelength deep into the affected bone and muscle tissue 2-4 inches below the surface and signals damaged cells to produce energy, which helps speed up the healing process. The laser also causes a chemical reaction to occur in the cells, which decreases the pain in that area of the body.
+            </p>
+            <p>
+                This therapy has proven to be effective in stimulating damaged cells, helping to promote faster healing which can be targeted to a specific area of the body. For a <strong>FREE</strong> consultation to find out if Class IV laser therapy is right for you, give us a call at (618) 233-6824 in Belleville or (618) 875-7246 in East St. Louis.
+            </p>
+
+            <h4>BENEFITS OF CLASS IV LASER THERAPY</h4>
+            <ul style="list-style-type: disc; margin-left: 20px;">
+                <li>Class IV laser therapy is a non-invasive treatment that does not require any incisions or injections.</li>
+                <li>The treatment is painless and has no side effects.</li>
+                <li>Increased blood circulation to the affected area, which can help reduce inflammation and promote healing.</li>
+                <li>Increased cellular activity, which can help to reduce pain and promote healing.</li>
+                <li>It can be used to treat a wide range of conditions, including chronic pain, inflammation, and injuries.</li>
+                <li>Each session typically lasts only a few minutes, making it a convenient option for busy patients.</li>
+            </ul>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/laser.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/laser.jpg">
+                <img decoding="async" src="/assets/images/laser.jpg" alt="Class IV Laser Therapy" width="542" height="520" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+
+    {% include 'sections/cta.html' %}
+
+
 
 {% endblock %}
 

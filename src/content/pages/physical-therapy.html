@@ -20,11 +20,72 @@ eleventyComputed:
 
 {% block body %}
 
-    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <!-- If you want the page to have a "CTA", remove the {# and #} below -->
-    {# {% include 'sections/cta.html' %} #}
+<div id="banner-843">
+    <div class="cs-container">
+        <span class="cs-int-title">PHYSICAL THERAPY</span>
+    </div>
+    <!--Background Image-->
+     <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/spine.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/spine.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/spine.jpg" alt="Consultation with model spine at Kaesberg Chiropractic Clinic" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
 
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+
+<section id="content-page-852">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title"><span class="cs-color">PHYSICAL</span> THERAPY SPECIALISTS IN <span class="cs-color">BELLEVILLE</span> & EAST ST. LOUIS</h1>
+            <h2>NATURAL TREATMENT FOR YOUR PAIN</h2>
+            <p>
+                You don't have to suffer from chronic back or neck pain any longer thanks to Kaesberg Chiropractic Clinic PC. With our physical therapy options and <a href="/chiropractic-care/">chiropractic care</a>, we can effectively treat your aches and pains. Physical therapy is a drug-free, natural solution that can be customized to your needs and specific condition.
+            </p>
+            <h2>TREATING THE CAUSE NOT JUST THE SYMPTOMS</h2>
+            <p>
+                With ongoing physical therapy, our staff will help your body heal naturally. You won't have to suffer from muscle tightness or the pain from a spinal condition any longer. Let our doctors treat the cause of your problem naturally at Kaesberg Chiropractic Clinic PC.
+            </p>
+            <h2>COMPREHENSIVE CARE FOR YOUR WELLNESS</h2>
+            <p>
+                At Kaesberg Chiropractic Clinic PC, we have a method of treatment for almost all injuries. Our physical therapy services are designed to provide comprehensive care for your overall wellness. We focus on restoring mobility, reducing pain, and improving your quality of life through personalized treatment plans.
+                <br><br>
+                Let our experienced staff help you regain a pain-free lifestyle. If we are unable to treat your condition, we can refer you to someone else in the area who can help.
+            </p>
+            <p>Therapies we provide include:</p>
+            <ul style="list-style-type: disc; margin-left: 20px;">
+                <li>Electrical muscle stimulation</li>
+                <li>Spine and joint rehabilitation</li>
+                <li>Spinal decompression</li>
+                <li>Class IV laser therapy</li>
+            </ul>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/physical-therapy.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/physical-therapy.png">
+                <img decoding="async" src="/assets/images/physical-therapy.png" alt="Patient doing physical therapy at Kaesberg Chiropractic Clinic PC." width="542" height="520" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+
+    {% include 'sections/cta.html' %}
 {% endblock %}
 
 

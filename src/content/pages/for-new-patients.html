@@ -20,11 +20,102 @@ eleventyComputed:
 
 {% block body %}
 
-    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <!-- If you want the page to have a "CTA", remove the {# and #} below -->
-    {# {% include 'sections/cta.html' %} #}
+<div id="banner-843">
+    <div class="cs-container">
+        <span class="cs-int-title">FOR NEW PATIENTS</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/spine.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/spine.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/spine.jpg" alt="Consultation with model spine at Kaesberg Chiropractic Clinic" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
 
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<section id="content-page-852">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">LOCATIONS IN BELLEVILLE & EAST ST. LOUIS</span>
+            <h1 class="cs-title">INFORMATION FOR NEW <span class="cs-color">PATIENTS</span></h1>
+            <h2>WELCOME TO KAESBERG CHIROPRACTIC CLINIC</h2>
+            <p>
+               Here at Kaesberg Chiropractic Clinic PC, we respect your time, which is why our appointments require minimal waiting time and we have two convenient locations in <a href="/locations/" target="_blank" rel="noopener noreferrer">Belleville, IL,</a> and <a href="/locations/" target="_blank" rel="noopener noreferrer">East St. Louis, IL</a>. 
+            </p>
+            <p>
+                Our helpful staff will complete your paperwork. We strive to always treat our patients the way we would like to be treated.
+            </p>
+            <h2>INSURANCE COVERAGE</h2>
+            <p>
+                We offer <strong>FREE</strong> consultations to check your insurance benefits and make certain you are receiving the best use of your coverage. We are also providers for most major insurance companies. Our office accepts an attorney letter of protection or claim information for  auto accidents.
+            </p>
+            <p>
+                Our practice also accepts Illinois workers' compensation. Medicare and state insurance plans do cover chiropractic care, with some limitations.
+            </p>
+            <h2>CONSULTATIONS</h2>
+            <p>
+                During your first consultation at Kaesberg Chiropractic Clinic PC, you will discuss your concerns and any current health-related issues. You will also learn about potential treatment options we offer.
+            </p>
+            <p>
+                We believe in providing comprehensive care and will work with you to develop a treatment plan that meets your specific needs and goals. In order to identify your problem, we will ask you a number of questions related to your condition. A variety of targeted tests will be performed to determine which parts of your body are affected and to what extent.
+            </p>
+            <h2>DIAGNOSTIC TESTS</h2>
+            <p>
+                To accurately diagnose your condition, we may recommend X-rays or more advanced tests such as an MRI, CT, NCV or EMG. These tests may rule out more serious conditions or assist us in determining the most effective treatment plan for you. However, most conditions can be diagnosed with spinal examination and clinical experience..
+            </p>
+            <h2>SAME-DAY TREATMENTS AVAILABLE</h2>
+            <p>
+                Patients generally undergo their first treatment during their first visit after the examination is completed. This may include spinal adjustments and physical therapy.
+            </p>
+            <p>
+                Treatment options for your condition will also be discussed at this time. Regular treatment is essential to the process, and we will do our best to fit your schedule. Patients are generally seen within 1-2 days of their initial visit. Our experience proves that getting care quickly provides the best outcome.
+            </p>
+            <h2>HOME CARE INSTRUCTIONS</h2>
+            <p>
+                Following your appointment, you will be given instructions on certain activities or procedures to be conducted at home. This may include ice or heat applications, avoidance of certain activities or positions, as well as home exercises. 
+            </p>
+            <h2>MEDICAL DISCLAIMER</h2>
+            <p>
+                All information on our website is intended for your general knowledge only and is not a substitute for medical advice or treatment for specific medical conditions.
+            </p>
+            <p>
+                The information contained in this site is presented in summary form and only intended to provide broad consumer understanding and knowledge of the services we offer.
+                <br><br>
+                The information should not be considered complete and not be used in place of a visit, call, consultation or advice of your physician or other health care provider.
+            </p>
+            <p>
+                We <strong><i>do not recommend</i></strong> the self-management of health problems. Information obtained by using our services is not exhaustive and does not cover all conditions or their treatment.
+            </p>
+            <h4><i>If you have any health care related questions, please contact your physician or other health care provider. You should never disregard medical advice or delay in seeking it because of something you have read on our website.</i></h4>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fcontent2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fcontent2.jpg">
+                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fcontent2.jpg" alt="person" width="542" height="520" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+                                
+
+
+    {% include 'sections/cta.html' %}
 {% endblock %}
 
 

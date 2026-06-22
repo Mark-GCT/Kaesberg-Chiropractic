@@ -4,15 +4,14 @@
 
 <header id="cs-navigation">
     <!--Nav Logo-->
-    <a href="/" class="cs-logo" aria-label="Return to {{ client.name }} Home page">
+    <a href="" class="cs-logo" aria-label="Return to {{ client.name }} Home page">
         <img src="/assets/images/logo.png" alt="Kaesberg Chiropractic Logo" width="210" height="29" aria-hidden="true" decoding="async">
     </a>
     <!--Top Bar-->
     <ul class="cs-top-bar">
         <li class="cs-item">
             <picture class="cs-picture">
-                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone-stroke-green.svg" alt="" width="24" height="24" aria-hidden="true"
-                    decoding="async">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fphone-stroke-green.svg" alt="" width="24" height="24" aria-hidden="true" decoding="async">
             </picture>
             <div class="cs-flex">
                 <span class="cs-header">Call Us Now</span>
@@ -21,8 +20,7 @@
         </li>
         <li class="cs-item cs-remove">
             <picture class="cs-picture">
-                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpin-stroke-green.svg" alt="" width="24" height="24" aria-hidden="true"
-                    decoding="async">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpin-stroke-green.svg" alt="" width="24" height="24" aria-hidden="true" decoding="async">
             </picture>
             <div class="cs-flex">
                 <span class="cs-header">Visit Us</span>
@@ -46,43 +44,61 @@
                     <span class="cs-line cs-line3"></span>
                 </span>
             </button>
+            <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how many there are-->
             <div class="cs-ul-wrapper" id="cs-ul-wrapper">
                 <ul class="cs-ul">
                     <li class="cs-li">
                         <!-- cs-active and aria-current="page" are hard-coded and must instead be managed dynamically via Eleventy templating -->
-                        <a href="/" class="cs-li-link cs-active" aria-current="page">
+                        <a href="/" class="cs-li-link {% if page.url == "/" %} cs-active {% endif %}" aria-current="page">
                             Home
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/about/" class="cs-li-link">
+                        <a href="/about/" class="cs-li-link {% if page.url == "/about/" %} cs-active {% endif %}">
                             About
                         </a>
                     </li>
-                    <li class="cs-li">
-                        <a href="/services/" class="cs-li-link">
+                    <!--Copy and paste this cs-dropdown list item and replace any .cs-li with this cs-dropdown group to make a new dropdown and it will work-->
+                    <!-- Note: When copying this dropdown, update the id attribute with an appropriate name (e.g., "services-dropdown-toggle", "products-dropdown-toggle") and ensure the aria-labelledby attribute on the ul matches the button's id -->
+                    <li class="cs-li cs-dropdown">
+                        <button class="cs-li-link cs-dropdown-toggle" aria-haspopup="menu" aria-expanded="false" id="about-dropdown-toggle">
                             Services
-                        </a>
+                            <img class="cs-drop-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fdown.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
+                        </button>
+                        <ul class="cs-drop-ul" aria-labelledby="about-dropdown-toggle">
+                            <li class="cs-drop-li">
+                                <a href="/accidents-and-injuries/" class="cs-li-link cs-drop-link">Accidents & Injuries</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/chiropractic-care/" class="cs-li-link cs-drop-link">Chiropractic Care</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/class-iv-laser-therapy/" class="cs-li-link cs-drop-link">Class IV Laser Therapy</a>
+                            </li>
+                             <li class="cs-drop-li">
+                                <a href="/physical-therapy/" class="cs-li-link cs-drop-link">Physical Therapy</a>
+                            </li>
+                             <li class="cs-drop-li">
+                                <a href="/spinal-decompression/" class="cs-li-link cs-drop-link">Spinal Decompression</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/neurolumen-therapy/" class="cs-li-link cs-drop-link">Neurolumen Therapy</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="cs-li">
-                        <a href="/for-new-patients/" class="cs-li-link">
+                        <a href="/for-new-patients/" class="cs-li-link {% if page.url == "/for-new-patients/" %} cs-active {% endif %}">
                             New Patients
                         </a>
                     </li>
                     <li class="cs-li">
-                        <a href="/locations/" class="cs-li-link">
+                        <a href="/locations/" class="cs-li-link {% if page.url == "/locations/" %} cs-active {% endif %}">
                             Locations
-                        </a>
-                    </li>
-                    <li class="cs-li">
-                        <a href="/faq/" class="cs-li-link">
-                            FAQ
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <a href="" class="cs-button-solid cs-nav-button">SCHEDULE AN APPOINTMENT</a>
+        <a href="/locations/" class="cs-button-solid cs-nav-button">SCHEDULE AN APPOINTMENT</a>
     </div>
 </header>
-                                

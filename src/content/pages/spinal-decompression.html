@@ -20,11 +20,78 @@ eleventyComputed:
 
 {% block body %}
 
-    <!-- Page HTML goes here, without a <main> wrapper. The <main> tag is already presented in layouts/base.html -->
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
 
-    <!-- If you want the page to have a "CTA", remove the {# and #} below -->
-    {# {% include 'sections/cta.html' %} #}
+<div id="banner-843">
+    <div class="cs-container">
+        <span class="cs-int-title">SPINAL DECOMPRESSION</span>
+    </div>
+    <!--Background Image-->
+     <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/spine.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/spine.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/spine.jpg" alt="Consultation with model spine at Kaesberg Chiropractic Clinic" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
 
+<!-- ============================================ -->
+<!--                 Content Page                 -->
+<!-- ============================================ -->
+
+<section id="content-page-851">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h1 class="cs-title">SPINAL <span class="cs-color">DECOMPRESSION</span> SPECIALISTS IN BELLEVILLE & <span class="cs-color">EAST ST. LOUIS</span></h1>
+            <h2>FIND RELIEF FROM SPINAL PAIN</h2>
+            <p>
+                Are you suffering from pain or pressure from a herniated or bulging disc? Kaesberg Chiropractic Clinic PC is here to give you the help you need. Spinal decompression treatment may be the answer to your spinal pain.
+            </p>
+            <p>
+                Spinal decompression gently draws the disc into alignment by the creation of negative pressure. The treatment also helps draw fluids, nutrients and blood supply back into the disc, thus "feeding" it and reversing the disc bulge, herniation or degeneration process.
+            </p>
+            <p>
+                This method can be used to treat neck and back pain and you may experience relief within just a few weeks!
+            </p>
+            
+            <h2>SPINAL DECOMPRESSION CAN TREAT</h2>
+            <p>
+                Spinal decompression can effectively treat a variety of spinal conditions, including:
+            </p>
+            <ul style="list-style-type: disc; margin-left: 20px;">
+                <li>Herniated discs</li>
+                <li>Bulging discs</li>
+                <li>Degenerative disc disease</li>
+                <li>Spinal stenosis</li>
+                <li>Chronic back pain & more</li>
+            </ul>
+
+            <h2>YOU DON'T HAVE TO LIVE WITH PAIN</h2>
+            <p>
+                Stop living with the pain of a bulging disc or other spinal condition, thanks to Kaesberg Chiropractic Clinic PC. Start on your journey to a naturally pain-free life by calling our family-owned practice in <a href="/locations/">Belleville</a> or <a href="/locations/">East St. Louis</a>. We'll create a custom treatment to meet your body's specific needs.
+
+            </p>
+        </div>
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/spinal-decompression.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/spinal-decompression.png">
+                <img decoding="async" src="/assets/images/spinal-decompression.png" alt="Spinal Decompression" width="542" height="520" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+</section>
+
+    {% include 'sections/cta.html' %}
 {% endblock %}
 
 
