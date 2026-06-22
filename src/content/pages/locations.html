@@ -42,6 +42,67 @@ eleventyComputed:
     </svg>
 </div>
 
+<!-- ============================================ -->
+<!--                   Map                     -->
+<!-- ============================================ -->
+
+<section id="locations-map">
+    <div class="cs-container">
+
+        <div class="cs-location">
+            <div class="cs-location-info">
+                <h2 class="cs-location-title">BELLEVILLE</h2>
+                <address class="cs-address">
+                    {{ client.address.lineOne }}<br>
+                    {{ client.address.city }}, {{ client.address.state }} {{ client.address.zip }}
+                </address>
+                <a href="tel:{{ client.phoneForTel }}" class="cs-phone">{{ client.phoneFormatted }}</a>
+                <a href="{{ client.address.mapLink }}" target="_blank" rel="noopener" class="cs-directions">GET DIRECTIONS</a>
+            </div>
+            <div class="cs-map-wrapper">
+                <iframe
+                    class="cs-map"
+                    src="https://maps.google.com/maps?q=100+Mascoutah+Ave,+Belleville,+IL+62221&output=embed&zoom=16"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Kaesberg Chiropractic Belleville location map"
+                ></iframe>
+            </div>
+        </div>
+
+        <div class="cs-location">
+            <div class="cs-location-info">
+                <h2 class="cs-location-title">EAST ST. LOUIS</h2>
+                <address class="cs-address">
+                    {{ client.address2.lineOne }}<br>
+                    {{ client.address2.city }}, {{ client.address2.state }} {{ client.address2.zip }}
+                </address>
+                <a href="tel:{{ client.phoneForTel2 }}" class="cs-phone">{{ client.phoneFormatted2 }}</a>
+                <a href="{{ client.address2.mapLink }}" target="_blank" rel="noopener" class="cs-directions">GET DIRECTIONS</a>
+            </div>
+            <div class="cs-map-wrapper">
+                <iframe
+                    class="cs-map"
+                    src="https://maps.google.com/maps?q=3131+State+St,+East+St+Louis,+IL+62205&output=embed&zoom=17"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Kaesberg Chiropractic East St. Louis location map"
+                ></iframe>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
     <!-- If you want the page to have a "CTA", remove the {# and #} below -->
     {# {% include 'sections/cta.html' %} #}
 

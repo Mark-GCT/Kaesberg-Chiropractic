@@ -1,0 +1,151 @@
+/*-- -------------------------- -->
+<---         Locations          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #locations-map {
+        padding: var(--sectionPadding);
+        padding-bottom: 14vw;
+        background-color: #fff;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(2rem, 5vw, 3rem);
+        }
+
+        .cs-location {
+            background-color: #fff;
+            border-radius: (12/16rem);
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cs-location-info {
+            padding: (32/16rem) (24/16rem);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: (16/16rem);
+        }
+
+        .cs-location-title {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            margin: 0;
+            color: var(--secondary);
+
+            &:after {
+                content: "";
+                display: block;
+                width: (48/16rem);
+                height: 3px;
+                margin-top: (8/16rem);
+                background-color: var(--primary);
+                border-radius: 2px;
+            }
+        }
+
+        .cs-address {
+            font-style: normal;
+            font-size: (16/16rem);
+            line-height: 1.6em;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-phone {
+            display: inline-block;
+            font-size: (16/16rem);
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: color 0.3s;
+
+            &:hover {
+                color: var(--secondary);
+            }
+        }
+
+        .cs-directions {
+            display: inline-block;
+            padding: (10/16rem) (24/16rem);
+            background-color: var(--primary);
+            color: var(--bodyTextColorWhite);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: (14/16rem);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: (4/16rem);
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s;
+            transition-delay: 0.1s;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background-color: var(--secondary);
+                border-radius: (4/16rem);
+                z-index: -1;
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-map-wrapper {
+            width: 100%;
+            /* removes the gap below the iframe */
+            line-height: 0;
+            margin-top: auto;
+        }
+
+        .cs-map {
+            width: 100%;
+            height: (280/16rem);
+            display: block;
+            border: none;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #locations-map {
+        .cs-map {
+            height: (380/16rem);
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #locations-map {
+        .cs-container {
+            flex-direction: row;
+            align-items: stretch;
+        }
+
+        .cs-location {
+            flex: 1;
+        }
+    }
+}
