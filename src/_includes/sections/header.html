@@ -4,7 +4,7 @@
 
 <header id="cs-navigation">
     <!--Nav Logo-->
-    <a href="" class="cs-logo" aria-label="Return to {{ client.name }} Home page">
+    <a href="/" class="cs-logo" aria-label="Return to {{ client.name }} Home page">
         <img src="/assets/images/logo.png" alt="Kaesberg Chiropractic Logo" width="210" height="29" aria-hidden="true" decoding="async">
     </a>
     <!--Top Bar-->
@@ -16,6 +16,26 @@
             <div class="cs-flex">
                 <span class="cs-header">Call Us Now</span>
                 <a href="tel:{{ client.phone }}" class="cs-link">{{ client.phoneFormatted }}</a> <a href="tel:{{ client.phone2 }}" class="cs-link">{{ client.phoneFormatted2 }}</a>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fmail-stroke-green.svg" alt="" width="24" height="24" aria-hidden="true"
+                    decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Send A Fax</span>
+                <a href="tel:{{ client.fax }}" class="cs-link">{{ client.faxFormatted }}</a>
+            </div>
+        </li>
+        <li class="cs-item">
+            <picture class="cs-picture">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fmail-stroke-green.svg" alt="" width="24" height="24" aria-hidden="true"
+                    decoding="async">
+            </picture>
+            <div class="cs-flex">
+                <span class="cs-header">Send A Message</span>
+                <a href="mailto:{{ client.email }}" class="cs-link">{{ client.email }}</a>
             </div>
         </li>
         <li class="cs-item cs-remove">
