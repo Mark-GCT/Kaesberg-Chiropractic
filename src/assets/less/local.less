@@ -5,13 +5,16 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #hero-446 {
-        /* Centers tag */
         text-align: center;
-        /* 144px - 300px - leaving extra space for the navigation */
-        padding: clamp(9rem, 25.95vw, 19.75rem) (16/16rem) 0;
-        padding-bottom: 0;
+        min-height: 100vh;
+        /* top padding accounts for fixed nav */
+        padding: (80/16rem) (16/16rem) 0;
         position: relative;
         z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         .cs-background {
             width: 100%;
@@ -67,6 +70,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+           
+            
         }
 
         .cs-tag {
@@ -473,9 +478,9 @@
                 content: "";
                 width: (299/16em);
                 height: (234/16em);
-                background: #fbcebd;
+                background: var(--secondaryLight);
                 border-radius: 0 (100/16em) 0 (100/16em);
-                opacity: 1;
+                opacity: 0.15;
                 position: absolute;
                 display: block;
                 bottom: 0;
