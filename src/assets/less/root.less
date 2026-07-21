@@ -1294,6 +1294,7 @@ color: var(--bodyTextColor);
             top: 0;
             left: 0;
             z-index: -1;
+			background: #000;
 
             &:before {
                 /* background color overlay */
@@ -1303,7 +1304,7 @@ color: var(--bodyTextColor);
                 height: 100%;
                 width: 100%;
                 background: #000;
-                opacity: 0.75;
+                opacity: 1;
                 top: 0;
                 left: 0;
                 z-index: 1;
@@ -1317,6 +1318,7 @@ color: var(--bodyTextColor);
                 width: 100%;
                 /* Makes img tag act as a background image */
                 object-fit: cover;
+				color:#000
             }
         }
     }
@@ -1328,11 +1330,7 @@ color: var(--bodyTextColor);
         .cs-background {
             &:before {
                 opacity: 1;
-                background: linear-gradient(
-                    90.01deg,
-                    rgba(0, 0, 0, 0.9) 16.86%,
-                    rgba(0, 0, 0, 0) 100%
-                );
+                background: #000;
             }
         }
     }
